@@ -1,0 +1,10 @@
+<h1>My tasks</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li><i class="fa-regular fa-calendar-check"></i> <%= link_to "#{task.title}", task_path(task), id: 'task' %></li>
+<% end %>
+</ul>
+<br>
+<br>
+<%= link_to 'create', new_task_path, class: 'link'%>
